@@ -1,0 +1,65 @@
+.input {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  background: rgba(30, 33, 36, 0.25);
+
+  input {
+    border: none;
+    background: none;
+    display: inline-block;
+    font-family: "Space Grotesk";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0em;
+    flex-grow: 1;
+    padding: 20px;
+    color: var(--white);
+
+    &::placeholder {
+      color: var(--white);
+      opacity: 0.5;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &_variant {
+    &_large {
+      max-height: 50px;
+    }
+    &_small {
+      max-height: 40px;
+    }
+  }
+
+  &.input_hidden {
+    input,
+    textarea {
+      display: none;
+    }
+  }
+
+  .svgIcon {
+    cursor: pointer;
+    margin: 18px 20px;
+  }
+}
+
+@media (max-width: 834px) {
+  .input input {
+    max-height: 50px;
+    padding: 15px 20px;
+  }
+
+  .input .svgIcon {
+    cursor: pointer;
+    margin: 13px 13px;
+  }
+}

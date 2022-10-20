@@ -1,0 +1,21 @@
+:root {
+  /* Pure Color */
+  --white: #ffffff;
+  --black: #000000;
+  --logo: #3ee5a9;
+  --menu: #202531;
+  --main: #12151d;
+  --dropdown: #171b24;
+  --violet: #654bff;
+
+  --gradient-yellow: radial-gradient(
+      113.31% 127.34% at 50.43% -17.05%,
+      #ffd233 0%,
+      #ff8a00 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}

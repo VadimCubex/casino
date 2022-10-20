@@ -1,0 +1,222 @@
+.menu {
+  top: 0;
+  position: sticky;
+  z-index: 10;
+  height: 80px;
+  background: var(--menu);
+
+  > div {
+    height: 100%;
+    display: flex;
+  }
+
+  .nav_container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    & > div:first-child {
+      display: flex;
+      gap: 40px;
+    }
+
+    .nav_profile {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav_logo {
+      padding: 14px 0px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .logo {
+        rect,
+        path {
+          fill: var(--logo);
+        }
+      }
+    }
+
+    .nav_bar {
+      display: flex;
+      align-items: center;
+
+      .nav_list {
+        align-self: flex-start;
+        list-style: none;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+        height: 100%;
+
+        a {
+          color: var(--white);
+        }
+
+        .nav_list_item {
+          display: flex;
+          align-items: center;
+
+          .dots {
+            position: relative;
+            display: flex;
+            gap: 3px;
+            margin-top: 7px;
+            margin-left: -10px;
+            padding: 8px 10px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+
+            .dot {
+              border: 1px solid #a0b2dc;
+              border-radius: 50%;
+              width: 6px;
+              height: 6px;
+            }
+
+            .additional {
+              top: 22px;
+              border-bottom-left-radius: 4px;
+              border-bottom-right-radius: 4px;
+              border-top-left-radius: 0px;
+              border-top-right-radius: 4px;
+              padding: 0px 20px;
+
+              &[class*="active"] {
+                background: var(--dropdown);
+                padding: 10px 20px;
+              }
+            }
+
+            &.active {
+              background: var(--dropdown);
+
+              .dot {
+                background: var(--white);
+                border-color: var(--white);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .best-quality-button .text {
+    background: radial-gradient(
+        138.8% 1270% at -24.32% 240%,
+        #ffffff 0%,
+        #85f7e2 47.4%,
+        #ffb60e 100%
+      ),
+      #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@media (max-width: 1439px) {
+  .nav-list .text {
+    margin-top: 31px;
+  }
+
+  .menu .nav-bar .text_variant_h3 {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .menu .nav-bar .text_variant_h4 {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .menu .nav-list {
+    gap: 15px;
+  }
+
+  .menu .nav-button-container {
+    gap: 10px;
+  }
+
+  .menu .nav-button-container .auth-buttons {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .menu .nav-list .text {
+    margin-top: 34px;
+  }
+
+  .menu .nav-list-item hr.nav-hr {
+    margin-right: 4px;
+  }
+
+  .menu .nav-bar .text_variant_h3 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .menu .nav-bar .text_variant_h4 {
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  .menu .nav-list {
+    gap: 10px;
+  }
+
+  .menu .nav-button-container {
+    gap: 5px;
+  }
+
+  .menu .nav-button-container .auth-buttons {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 834px) {
+  .menu .nav-container .nav-logo .text_variant_h1_medium {
+    display: block;
+  }
+
+  .menu {
+    background: var(--menu);
+    max-height: fit-content;
+  }
+
+  .menu .nav-container .nav-logo .svgIcon {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .menu .nav-button-container {
+    gap: 30px;
+    margin: 60px 0px;
+  }
+
+  .menu .nav-button-container .auth-buttons {
+    gap: 30px;
+  }
+
+  .menu .nav-bar {
+    display: none;
+    align-items: unset;
+  }
+
+  .menu .nav-container {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .menu .nav-container .nav-svg {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

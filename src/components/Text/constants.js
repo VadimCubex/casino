@@ -1,0 +1,15 @@
+export const TextVariants = {
+  h1: "h1",
+  h2: "h2",
+  h3: "h3",
+  h4: "h4",
+  h5: "h5",
+  subtitle_medium: "subtitle_medium",
+  subtitle_small: "subtitle_small",
+  h1_medium: "h1_medium",
+  h2_medium: "h2_medium",
+  h3_regular: "h3_regular",
+  h4_regular: "h4_regular",
+  h5_regular: "h5_regular",
+  title: "title",
+};

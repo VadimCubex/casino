@@ -1,0 +1,82 @@
+.App {
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 9%;
+  padding-right: 9%;
+}
+
+.cursor_pointer {
+  cursor: pointer;
+}
+
+.block {
+  position: relative;
+  background: linear-gradient(
+      0deg,
+      rgba(30, 33, 36, 0.75),
+      rgba(30, 33, 36, 0.75)
+    ),
+    radial-gradient(
+      99.13% 96.45% at 31.38% -58.62%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  border: 1px solid;
+
+  border-image-source: radial-gradient(
+    99.13% 96.45% at 31.38% -58.62%,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 20px;
+}
+
+@media (max-width: 1439px) {
+  .container {
+    padding-left: 7.75%;
+    padding-right: 7.75%;
+  }
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 6.5%;
+    padding-right: 6.5%;
+  }
+}
+
+@media (max-width: 834px) {
+  .container {
+    padding-left: 5.25%;
+    padding-right: 5.25%;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+::-webkit-scrollbar {
+  background: black;
+  width: 4px;
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  width: 4px;
+  background-color: var(--gray);
+}

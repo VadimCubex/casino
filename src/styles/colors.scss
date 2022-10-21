@@ -7,6 +7,21 @@
   --main: #12151d;
   --dropdown: #171b24;
   --violet: #654bff;
+  --blue: #0066ff;
+  --light-blue: #39acff;
+  --yellow: #ffc638;
+
+  --gradient-violet: linear-gradient(0deg, #654bff, #ffffff);
+  --gradient-blue: radial-gradient(
+      224.69% 252.5% at 50% -65%,
+      #0066ff 0%,
+      #39acff 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
 
   --gradient-yellow: radial-gradient(
       113.31% 127.34% at 50.43% -17.05%,

@@ -3,14 +3,18 @@
   width: fit-content;
 
   .avatar_light {
+    z-index: -1;
+    border-radius: 50%;
     position: absolute;
-    top: 0px;
+    top: 5px;
+    filter: blur(10px);
+    opacity: 0.5;
   }
 
   .avatar {
     border-radius: 50%;
     background-size: cover;
-    
+
     &_variant_large {
       width: 150px;
       height: 150px;
@@ -34,7 +38,7 @@
       width: 140px;
       height: 140px;
     }
-  
+
     &_variant_medium {
       width: 79px;
       height: 79px;
@@ -48,12 +52,12 @@
       width: 125px;
       height: 125px;
     }
-  
+
     &_variant_medium {
       width: 68px;
       height: 68px;
     }
-  
+
     &_variant_small {
       width: 42px;
       height: 42px;
@@ -67,7 +71,7 @@
       width: 110px;
       height: 110px;
     }
-  
+
     &_variant_medium {
       width: 57px;
       height: 57px;
@@ -79,17 +83,17 @@
   .avatar {
     border-radius: 50%;
     background-size: cover;
-    
+
     &_variant_large {
       width: 100px;
       height: 100px;
     }
-  
+
     &_variant_medium {
       width: 46px;
       height: 46px;
     }
-  
+
     &_variant_small {
       width: 40px;
       height: 40px;

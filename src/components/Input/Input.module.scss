@@ -4,21 +4,20 @@
   overflow: hidden;
   width: 100%;
   height: fit-content;
-  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  background: rgba(30, 33, 36, 0.25);
+  background: #2d323e;
+  align-items: center;
 
   input {
     border: none;
     background: none;
     display: inline-block;
-    font-family: "Space Grotesk";
+    font-family: "Inter";
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 20px;
     letter-spacing: 0em;
     flex-grow: 1;
-    padding: 20px;
     color: var(--white);
 
     &::placeholder {
@@ -33,9 +32,19 @@
   &_variant {
     &_large {
       max-height: 50px;
+      max-width: 330px;
+
+      input {
+        padding: 15px;
+      }
     }
     &_small {
       max-height: 40px;
+      max-width: 320px;
+
+      input {
+        padding: 10px;
+      }
     }
   }
 

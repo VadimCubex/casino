@@ -1,6 +1,8 @@
 import React, { forwardRef } from "react";
 import classNames from "classnames";
 
+import { Light } from "../Light";
+
 import styles from "./Input.module.scss";
 
 export const InputComponent = forwardRef(
@@ -13,6 +15,8 @@ export const InputComponent = forwardRef(
       rightSide,
       leftSide,
       hidden,
+      isLight = false,
+      lightColor,
       onChange,
       onClick,
       className,
@@ -30,6 +34,7 @@ export const InputComponent = forwardRef(
 
     return (
       <div className={InputClass}>
+        {isLight && <Light position="left" color={lightColor} />}
         {leftSide && <div>{leftSide || null}</div>}
         <input
           ref={ref}

@@ -1,10 +1,12 @@
 import React from "react";
 import classNames from "classnames";
 
+import { Level } from "../Level";
+
 import styles from "./Avatar.module.scss";
 
 export const AvatarComponent = React.forwardRef(
-  ({ variant, isLight, src, className }, ref) => {
+  ({ variant, level, isLight, src, className }, ref) => {
     const AvatarClass = classNames(
       styles.avatar,
       {
@@ -12,12 +14,15 @@ export const AvatarComponent = React.forwardRef(
       },
       className
     );
+    const AvatarLight = classNames(styles.avatar_light, {
+      [styles[`avatar_variant_${variant}`]]: variant,
+    });
 
     return (
       <div className={styles.avatar_container}>
         {isLight && (
           <div
-            className={styles.avatar_light}
+            className={AvatarLight}
             style={src ? { backgroundImage: `url(${src})` } : {}}
           ></div>
         )}
@@ -26,6 +31,7 @@ export const AvatarComponent = React.forwardRef(
           className={AvatarClass}
           style={src ? { backgroundImage: `url(${src})` } : {}}
         ></div>
+        {level && <Level level={level} />}
       </div>
     );
   }

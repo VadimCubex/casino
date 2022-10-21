@@ -1,0 +1,112 @@
+.light {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4px;
+  height: 4px;
+
+  .main {
+    border-radius: 50%;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+  }
+
+  .circle1 {
+    border-radius: 50%;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    opacity: 0.75;
+    filter: blur(2.5px);
+  }
+
+  .circle2 {
+    border-radius: 50%;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    opacity: 0.25;
+    filter: blur(5px);
+  }
+
+  .circle3 {
+    border-radius: 50%;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    opacity: 0.25;
+    filter: blur(40px);
+  }
+
+  &_width {
+    &_full {
+      width: 100%;
+
+      .main {
+        width: 100%;
+      }
+
+      .circle1 {
+        width: calc(100% + 4px);
+      }
+
+      .circle2 {
+        width: calc(100% + 12px);
+      }
+
+      .circle3 {
+        width: calc(100% + 56px);
+      }
+    }
+  }
+
+  &_color {
+    &_blue {
+      .main {
+        background: var(--white);
+      }
+
+      .circle1 {
+        background: var(--light-blue);
+      }
+
+      .circle2 {
+        background: var(--light-blue);
+      }
+
+      .circle3 {
+        background: var(--light-blue);
+      }
+    }
+  }
+
+  &_position {
+    &_left {
+      left: -2px;
+    }
+    &_right {
+      right: -2px;
+    }
+    &_top {
+      top: -2px;
+    }
+    &_bottom {
+      bottom: -2px;
+    }
+  }
+}
+
+@media (max-width: 1439px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 834px) {
+}
+
+@media (max-width: 425px) {
+}

@@ -6,10 +6,12 @@ export const TextVariants = {
   h5: "h5",
   subtitle_medium: "subtitle_medium",
   subtitle_small: "subtitle_small",
-  h1_medium: "h1_medium",
-  h2_medium: "h2_medium",
-  h3_regular: "h3_regular",
-  h4_regular: "h4_regular",
-  h5_regular: "h5_regular",
   title: "title",
+};
+
+export const TextWeightVariants = {
+  Bold: "bold",
+  SemiBold: "semibold",
+  Medium: "medium",
+  Regular: "regular",
 };

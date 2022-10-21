@@ -1,0 +1,65 @@
+.sub_menu {
+  height: 60px;
+  display: flex;
+  gap: 200px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+  .nav_bar {
+    display: flex;
+    align-items: center;
+
+    .nav_list {
+      align-self: flex-start;
+      list-style: none;
+      text-decoration: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+      height: 100%;
+
+      .nav_list_item {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+
+    .best {
+      padding: 0px 20px;
+      height: 100%;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      > div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        [class*="text"] {
+          color: var(--yellow);
+        }
+      }
+    }
+
+    .search_icon {
+      margin-left: 15px;
+    }
+  }
+}
+
+@media (max-width: 1439px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 834px) {
+}

@@ -7,7 +7,7 @@ import { DropDown } from "../DropDown";
 import { SvgIcon } from "../SvgIcon";
 import { ArrowBottomStroke, ColorSvgVariants } from "../SvgIcon/constants";
 import { Text } from "../Text";
-import { TextVariants } from "../Text/constants";
+import { TextVariants, TextWeightVariants } from "../Text/constants";
 
 import styles from "./Language.module.scss";
 
@@ -41,7 +41,12 @@ export const LanguageComponent = ({ className }) => {
                 onClick={() => handleClickItem(item)}
                 key={item}
               >
-                <Text variant={TextVariants.h5_regular}>{item}</Text>
+                <Text
+                  variant={TextVariants.h5}
+                  weight={TextWeightVariants.Regular}
+                >
+                  {item}
+                </Text>
               </div>
             )
         )}

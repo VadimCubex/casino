@@ -10,7 +10,7 @@
     display: flex;
   }
 
-  .nav_container {
+  .header_container {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -18,12 +18,33 @@
     & > div:first-child {
       display: flex;
       gap: 40px;
+      align-items: center;
     }
 
     .nav_profile {
+      position: relative;
       display: flex;
       align-items: center;
       gap: 25px;
+
+      .light {
+        z-index: -1;
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        top: -30px;
+        right: 20px;
+        background: var(--gradient-blue);
+        opacity: 0.35;
+        filter: blur(80px);
+      }
+
+      .avatar {
+        cursor: pointer;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
     }
 
     .nav_logo {
@@ -106,117 +127,13 @@
       }
     }
   }
-
-  .best-quality-button .text {
-    background: radial-gradient(
-        138.8% 1270% at -24.32% 240%,
-        #ffffff 0%,
-        #85f7e2 47.4%,
-        #ffb60e 100%
-      ),
-      #ffffff;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
 }
 
 @media (max-width: 1439px) {
-  .nav-list .text {
-    margin-top: 31px;
-  }
-
-  .menu .nav-bar .text_variant_h3 {
-    font-size: 16px;
-    line-height: 25px;
-  }
-
-  .menu .nav-bar .text_variant_h4 {
-    font-size: 13px;
-    line-height: 20px;
-  }
-
-  .menu .nav-list {
-    gap: 15px;
-  }
-
-  .menu .nav-button-container {
-    gap: 10px;
-  }
-
-  .menu .nav-button-container .auth-buttons {
-    gap: 5px;
-  }
 }
 
 @media (max-width: 1024px) {
-  .menu .nav-list .text {
-    margin-top: 34px;
-  }
-
-  .menu .nav-list-item hr.nav-hr {
-    margin-right: 4px;
-  }
-
-  .menu .nav-bar .text_variant_h3 {
-    font-size: 14px;
-    line-height: 20px;
-  }
-
-  .menu .nav-bar .text_variant_h4 {
-    font-size: 11px;
-    line-height: 15px;
-  }
-
-  .menu .nav-list {
-    gap: 10px;
-  }
-
-  .menu .nav-button-container {
-    gap: 5px;
-  }
-
-  .menu .nav-button-container .auth-buttons {
-    gap: 5px;
-  }
 }
 
 @media (max-width: 834px) {
-  .menu .nav-container .nav-logo .text_variant_h1_medium {
-    display: block;
-  }
-
-  .menu {
-    background: var(--menu);
-    max-height: fit-content;
-  }
-
-  .menu .nav-container .nav-logo .svgIcon {
-    width: 38px !important;
-    height: 38px !important;
-  }
-
-  .menu .nav-button-container {
-    gap: 30px;
-    margin: 60px 0px;
-  }
-
-  .menu .nav-button-container .auth-buttons {
-    gap: 30px;
-  }
-
-  .menu .nav-bar {
-    display: none;
-    align-items: unset;
-  }
-
-  .menu .nav-container {
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .menu .nav-container .nav-svg {
-    width: 100%;
-    justify-content: space-between;
-  }
 }

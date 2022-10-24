@@ -1,0 +1,21 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 20px;
+  background: var(--menu);
+  border-radius: 20px;
+  overflow: hidden;
+
+  .table_content {
+    flex-direction: column;
+    padding-bottom: 30px;
+    display: flex;
+  }
+}
+
+@media (max-width: 834px) {
+}
+
+@media (max-width: 425px) {
+}

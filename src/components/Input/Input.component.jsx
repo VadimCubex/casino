@@ -35,7 +35,7 @@ export const InputComponent = forwardRef(
     return (
       <div className={InputClass}>
         {isLight && <Light position="left" color={lightColor} />}
-        {leftSide && <div>{leftSide || null}</div>}
+        {leftSide || null}
         <input
           ref={ref}
           value={value}

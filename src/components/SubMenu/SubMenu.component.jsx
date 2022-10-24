@@ -5,8 +5,11 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import { SubNavLinks } from "./constants";
 import { numberWithCommas } from "../../helpers/helpers";
+import { Button } from "../Button";
+import { ButtonSizeVariants, ButtonVariants } from "../Button/constants";
 import { Input } from "../Input";
 import { InputVariants } from "../Input/constants";
+import { Light } from "../Light";
 import { LightColors } from "../Light/constants";
 import { SvgIcon } from "../SvgIcon";
 import { ColorSvgVariants, SearchIcon, TicketStar } from "../SvgIcon/constants";
@@ -46,12 +49,15 @@ export const SubMenuComponent = () => {
               key={index}
             >
               <Text
+                className={styles.game}
                 variant={TextVariants.h5}
                 weight={TextWeightVariants.Medium}
               >
                 {item.text}
               </Text>
-              <div className={styles.separator}></div>
+              {index !== SubNavLinks.length - 1 && (
+                <div className={styles.separator}></div>
+              )}
             </li>
           ))}
         </ul>
@@ -67,6 +73,12 @@ export const SubMenuComponent = () => {
           <Text variant={TextVariants.h5} weight={TextWeightVariants.Medium}>
             Best Wagered
           </Text>
+          <Light
+            width="full"
+            color={LightColors.yellow}
+            position="bottom"
+            className={styles.light}
+          />
         </div>
         <Input
           variant={InputVariants.small}
@@ -79,6 +91,15 @@ export const SubMenuComponent = () => {
               size={24}
               src={SearchIcon}
               color={ColorSvgVariants.white}
+            />
+          }
+          rightSide={
+            <Button
+              className={styles.search_btn}
+              size={ButtonSizeVariants.small}
+              variant={ButtonVariants.blue}
+              text="Search"
+              isLight={true}
             />
           }
         />

@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 import Layout from "../layout/Layout";
 import Home from "../pages/Home/Home";
@@ -11,6 +11,7 @@ const GamingCasinoRoutes = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="login" element={<Login />} />
+        <Route path="*" element={<Navigate to={"/"} />} />
       </Route>
     </Routes>
   );

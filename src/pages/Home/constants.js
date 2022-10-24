@@ -1,53 +1,94 @@
 import {
-  IconsVariants,
-  ImagesVariants,
-} from "../../constants/VariantsOfComponents";
+  Avatar2,
+  Avatar3,
+  Avatar4,
+  Avatar5,
+  Avatar6,
+} from "../../constants/constants";
 
-export const AdvantagesInfo = [
-  {
-    icon: IconsVariants.Heart,
-    title: "Quality Likes",
-    description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
-  },
-  {
-    icon: IconsVariants.Eye,
-    title: "Real Views",
-    description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
-  },
-  {
-    icon: IconsVariants.Mask,
-    title: "Quality Followers",
-    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-  },
-  {
-    icon: IconsVariants.Subtract,
-    title: "Support 24/7",
-    description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
-  },
-];
+export const HighWinsColumn = {
+  game: "Game",
+  user: "User",
+  time: "Time",
+  wager: "Wager",
+  mult: "Mult",
+  payout: "Payout",
+};
 
-export const ExperienceSliderInfo = [
+export const HighWinsData = [
   {
-    title: "Unique Prices",
-    img: ImagesVariants.Slider_girl,
-    description:
-      "You won’t find a more affordable way to grow your accounts. Prices start at only $0.001!",
-    text_link: "More about prices ↗",
-    link: "/",
+    row: {
+      game: "Crash",
+      user: {
+        name: "Aert1357",
+        img: Avatar2,
+        level: 1,
+      },
+      time: "8:40 am",
+      wager: 10,
+      mult: 0.0,
+      payout: 10.0,
+      isWin: false,
+    },
   },
   {
-    title: "Nitro Delivery",
-    img: ImagesVariants.Slider_girl,
-    description:
-      "Nobody is faster! After completing your purchase, our automated delivery process begins. In just seconds your order is delivered.",
+    row: {
+      game: "Mines",
+      user: {
+        name: "tybandzzzz",
+        img: Avatar3,
+        level: 2,
+      },
+      time: "8:40 am",
+      wager: 14,
+      mult: 0.0,
+      payout: 25.0,
+      isWin: false,
+    },
   },
   {
-    title: "Lorem, ipsum",
-    img: ImagesVariants.Slider_girl,
-    description:
-      "1 You won’t find a more affordable way to grow your accounts. Prices start at only $0.001!",
+    row: {
+      game: "Coinflip",
+      user: {
+        name: "mrRobLucky",
+        img: Avatar4,
+        level: 3,
+      },
+      time: "8:40 am",
+      wager: 25,
+      mult: 0.71,
+      payout: 20.0,
+      isWin: true,
+    },
+  },
+  {
+    row: {
+      game: "Cases",
+      user: {
+        name: "Dorynel2000",
+        img: Avatar5,
+        level: 1,
+      },
+      time: "8:40 am",
+      wager: 10,
+      mult: 3.65,
+      payout: 36.5,
+      isWin: true,
+    },
+  },
+  {
+    row: {
+      game: "Coinflip",
+      user: {
+        name: "RandyBoranders",
+        img: Avatar6,
+        level: 5,
+      },
+      time: "8:40 am",
+      wager: 14,
+      mult: 0.0,
+      payout: 10.0,
+      isWin: false,
+    },
   },
 ];

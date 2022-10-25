@@ -7,6 +7,8 @@ import { Avatar } from "../../../Avatar";
 import { AvatarVariants } from "../../../Avatar/constants";
 import { Light } from "../../../Light";
 import { LightColors } from "../../../Light/constants";
+import { SvgIcon } from "../../../SvgIcon";
+import { Icons } from "../../../SvgIcon/constants";
 import { Text } from "../../../Text";
 import { TextVariants } from "../../../Text/constants";
 
@@ -65,7 +67,7 @@ const RowMain = ({ item }) => {
       <div
         className={classNames(styles.table_row_cell, styles.table_row_cell_3)}
       >
-        <Text variant={TextVariants.h5}>{item.row.time}</Text>
+        <Text variant={TextVariants.subtitle_medium}>{item.row.time}</Text>
       </div>
       <div
         className={classNames(styles.table_row_cell, styles.table_row_cell_4)}
@@ -73,17 +75,37 @@ const RowMain = ({ item }) => {
         <Text variant={TextVariants.h5}>{item.row.wager}$</Text>
       </div>
       <div
-        className={classNames(styles.table_row_cell, styles.table_row_cell_5)}
-      >
-        <Text variant={TextVariants.h5}>{item.row.mult.toFixed(2, "0")}x</Text>
-      </div>
-      <div
-        className={classNames(styles.table_row_cell, styles.table_row_cell_6)}
+        className={classNames(styles.table_row_cell, styles.table_row_cell_5, {
+          [styles.win]: item.row.isWin,
+        })}
       >
         <Text variant={TextVariants.h5}>
-          {!item.row.isWin && "-$"}
-          {item.row.payout.toFixed(2, "0")}
+          {item.row.mult.toFixed(2, "0")}x
+          {item.row.isWin && (
+            <Light
+              position="bottom"
+              color={LightColors.green}
+              className={styles.win_light}
+            />
+          )}
         </Text>
+      </div>
+      <div
+        className={classNames(styles.table_row_cell, styles.table_row_cell_6, {
+          [styles.win]: item.row.isWin,
+        })}
+      >
+        <Text variant={TextVariants.h5}>
+          {!item.row.isWin && "-"}${item.row.payout.toFixed(2, "0")}
+          {item.row.isWin && (
+            <Light
+              position="bottom"
+              color={LightColors.green}
+              className={styles.win_light}
+            />
+          )}
+        </Text>
+        <SvgIcon size={24} src={Icons.CurrencyIcon} isLight={true} />
       </div>
     </div>
   );

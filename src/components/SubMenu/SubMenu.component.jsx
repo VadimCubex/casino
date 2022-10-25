@@ -12,7 +12,7 @@ import { InputVariants } from "../Input/constants";
 import { Light } from "../Light";
 import { LightColors } from "../Light/constants";
 import { SvgIcon } from "../SvgIcon";
-import { ColorSvgVariants, SearchIcon, TicketStar } from "../SvgIcon/constants";
+import { ColorSvgVariants, Icons } from "../SvgIcon/constants";
 import { Text } from "../Text";
 import { TextVariants, TextWeightVariants } from "../Text/constants";
 
@@ -65,7 +65,7 @@ export const SubMenuComponent = () => {
       <div className={styles.info}>
         <div className={styles.best}>
           <div>
-            <SvgIcon size={24} src={TicketStar} />
+            <SvgIcon size={24} src={Icons.TicketStar} />
             <Text variant={TextVariants.h5} weight={TextWeightVariants.Bold}>
               {numberWithCommas(2800828712)}
             </Text>
@@ -89,7 +89,7 @@ export const SubMenuComponent = () => {
             <SvgIcon
               className={styles.search_icon}
               size={24}
-              src={SearchIcon}
+              src={Icons.SearchIcon}
               color={ColorSvgVariants.white}
             />
           }

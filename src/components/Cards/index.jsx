@@ -1,1 +1,1 @@
-export { SalesCardComponent as SalesCard } from "./SalesCard/SalesCard.component";
+export { GameCardComponent as GameCard } from "./GameCard/GameCard.component";

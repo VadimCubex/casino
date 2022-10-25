@@ -4,11 +4,7 @@ import classNames from "classnames";
 import { Button } from "../Button";
 import { ButtonVariants } from "../Button/constants";
 import { SvgIcon } from "../SvgIcon";
-import {
-  ArrowBottomStroke,
-  ColorSvgVariants,
-  CurrencyIcon,
-} from "../SvgIcon/constants";
+import { ColorSvgVariants, Icons } from "../SvgIcon/constants";
 import { Text } from "../Text";
 import { TextVariants } from "../Text/constants";
 
@@ -22,11 +18,11 @@ export const BalanceComponent = ({ className }) => {
 
   return (
     <div className={BalanceClass}>
-      <SvgIcon size={24} src={CurrencyIcon} isLight={true} />
+      <SvgIcon size={24} src={Icons.CurrencyIcon} isLight={true} />
       <div className={styles.count}>
         <Text variant={TextVariants.h4}>$ {balance.toFixed(2, "0")}</Text>
         <SvgIcon
-          src={ArrowBottomStroke}
+          src={Icons.ArrowBottomStroke}
           size={7}
           color={ColorSvgVariants.white}
         />

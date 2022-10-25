@@ -1,0 +1,124 @@
+.scroll_tabs {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  height: 50px;
+  align-items: center;
+  background: #2d323e;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 5px;
+  box-shadow: inset 0px 3px 10px rgba(29, 32, 39, 0.5);
+
+  .tab {
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+    height: 100%;
+  }
+
+  .scroll_container {
+    z-index: 1;
+    position: absolute;
+
+    &_size {
+      &_sm {
+        height: 34px;
+      }
+
+      &_md {
+        height: 40px;
+      }
+
+      &_lg {
+        height: 50px;
+      }
+
+      &_xl {
+        height: 60px;
+      }
+    }
+
+    .scroll {
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+      border-radius: 8px;
+
+      &.light {
+        width: calc(100% + 16px);
+        height: calc(100% + 16px);
+        top: -8px;
+        left: -8px;
+        position: absolute;
+        opacity: 0.5;
+        filter: blur(15px);
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+        -webkit-filter: blur(15px);
+        -moz-filter: blur(15px);
+        -ms-filter: blur(15px);
+      }
+
+      &_variant {
+        &_default {
+          background: unset;
+          color: var(--white);
+          stroke: var(--white);
+          border: 1px solid #415459;
+        }
+        /* Variant blue */
+
+        &_yellow {
+          background: var(--gradient-yellow);
+          color: var(--white);
+          border: 1px solid;
+          border-image-source: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.5) 0%,
+            rgba(255, 255, 255, 0) 100%
+          );
+        }
+
+        /* Variant blue */
+
+        &_blue {
+          color: var(--white);
+          background: var(--gradient-blue);
+          border: 1px solid;
+          border-image-source: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.5) 0%,
+            rgba(255, 255, 255, 0) 100%
+          );
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 834px) {
+  .button {
+    &_size {
+      &_xl {
+        height: 55px;
+        width: 55px;
+        border-radius: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .button {
+    &_size {
+      &_xl {
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+}

@@ -13,7 +13,7 @@ import { ButtonSizeVariants, ButtonVariants } from "../Button/constants";
 import { DropDown } from "../DropDown";
 import { Language } from "../Language";
 import { SvgIcon } from "../SvgIcon";
-import { ArrowBottomStroke, ColorSvgVariants } from "../SvgIcon/constants";
+import { ColorSvgVariants, Icons } from "../SvgIcon/constants";
 import { Text } from "../Text";
 import { TextVariants, TextWeightVariants } from "../Text/constants";
 
@@ -124,7 +124,7 @@ export const MenuComponent = () => {
             />
             <SvgIcon
               size={7}
-              src={ArrowBottomStroke}
+              src={Icons.ArrowBottomStroke}
               color={ColorSvgVariants.white}
               rotate={isOpenProfiles ? "180" : "0"}
             />

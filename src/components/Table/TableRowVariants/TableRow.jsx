@@ -1,11 +1,11 @@
 import React from "react";
 
-import RowTickets from "./RowMain/RowMain";
+import RowMain from "./RowMain/RowMain";
 import { TableVariants } from "../constants";
 
 const TableRow = ({ variant, item }) => {
   const RowVariantMap = {
-    [TableVariants.Main]: <RowTickets item={item} />,
+    [TableVariants.Main]: <RowMain item={item} />,
   };
 
   return <>{RowVariantMap[variant]}</>;

@@ -7,6 +7,7 @@ export const TextVariants = {
   subtitle_medium: "subtitle_medium",
   subtitle_small: "subtitle_small",
   title: "title",
+  smallTitle: "small_title",
 };
 
 export const TextWeightVariants = {

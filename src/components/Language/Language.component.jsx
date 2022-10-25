@@ -5,7 +5,7 @@ import classNames from "classnames";
 import { Languages } from "./constants";
 import { DropDown } from "../DropDown";
 import { SvgIcon } from "../SvgIcon";
-import { ArrowBottomStroke, ColorSvgVariants } from "../SvgIcon/constants";
+import { ColorSvgVariants, Icons } from "../SvgIcon/constants";
 import { Text } from "../Text";
 import { TextVariants, TextWeightVariants } from "../Text/constants";
 
@@ -27,7 +27,7 @@ export const LanguageComponent = ({ className }) => {
         <Text variant={TextVariants.h5}>{language}</Text>
         <SvgIcon
           size={7}
-          src={ArrowBottomStroke}
+          src={Icons.ArrowBottomStroke}
           color={ColorSvgVariants.white}
           rotate={isOpen ? "180" : "0"}
         />

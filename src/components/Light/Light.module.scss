@@ -86,6 +86,17 @@
         background: var(--yellow);
       }
     }
+
+    &_green {
+      .main {
+        background: var(--white);
+      }
+      .circle1,
+      .circle2,
+      .circle3 {
+        background: var(--light-green);
+      }
+    }
   }
 
   &_position {

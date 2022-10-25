@@ -4,7 +4,31 @@ import {
   Avatar4,
   Avatar5,
   Avatar6,
+  GamesBackgrounds,
 } from "../../constants/constants";
+
+export const Games = [
+  {
+    name: "Crash",
+    link: "/crash",
+    img: GamesBackgrounds.Crash,
+  },
+  {
+    name: "Cases",
+    link: "/cases",
+    img: GamesBackgrounds.Cases,
+  },
+  {
+    name: "Mines",
+    link: "/mines",
+    img: GamesBackgrounds.Mines,
+  },
+  {
+    name: "Coinflip",
+    link: "/coinflip",
+    img: GamesBackgrounds.Coinflip,
+  },
+];
 
 export const HighWinsColumn = {
   game: "Game",
